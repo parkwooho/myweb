@@ -7,149 +7,597 @@
     <title>포트폴리오</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="main.css">
+    <style>
+        .table-container {
+          display: flex;
+          justify-content: center;
+          padding: 20px;
+        }
+        
+        .rounded-table {
+          border-collapse: separate;
+          border-spacing: 0;
+          width: auto;
+          max-width: 1920px;
+          margin: 20px auto;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 0 0 1px #ddd;
+        }
+        
+        /* 모든 텍스트 가운데 정렬 추가 */
+        .rounded-table th,
+        .rounded-table td {
+          padding: 12px;
+          text-align: center; /* left → center로 변경 */
+          border-right: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+          background: #fff;
+        }
+        
+        /* 세로 정렬도 조절하고 싶다면 추가 */
+        .rounded-table th,
+        .rounded-table td {
+          vertical-align: middle; /* 기본값이지만 명시적으로 지정 */
+        }
+        
+        .rounded-table th {
+          background-color: #f8f9fa;
+          border-top: 1px solid #ddd;
+        }
+        
+        /* 나머지 스타일은 동일 */
+        .rounded-table td:first-child,
+        .rounded-table th:first-child {
+          border-left: 1px solid #ddd;
+        }
+        
+        .rounded-table tr:first-child th:first-child {
+          border-top-left-radius: 15px;
+        }
+        
+        .rounded-table tr:first-child th:last-child {
+          border-top-right-radius: 15px;
+        }
+        
+        .rounded-table tr:last-child td:first-child {
+          border-bottom-left-radius: 15px;
+        }
+        
+        .rounded-table tr:last-child td:last-child {
+          border-bottom-right-radius: 15px;
+        }
+    </style>
 <body>
     <center>
     <img src="ccc_page_2.png" width="1200"><br>
-    <!--div id="wrap">
-        <div class="container">
-            <div class="inner">
-                <div class="contents">
-                    <section>
-                        <table class="list_table mt30">
-                            <colgroup>
-                                <col width="40%">
-                                <col width="20%">
-                                <col width="25%">
-                                <col width="15%">
-                            </colgroup>
-                            <thead>
-                                <th class="fix"><span>프로젝트명</span></th>
-                                <th><span>수행기간</span></th>
-                                <th><span>주요 역할</span></th>
-                                <th><span>발주처</span></th>
-                            </thead>
-                            <tbody>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">모바일/웹/데스크톱 크로스플랫폼 금융차트 개발</td>
-                                    <td class="text-center">2024.04 ~ 2024.08 (약 5개월) </td>
-                                    <td class="text-center">프론트,백엔드 개발</td>
-                                    <td class="text-center">서원정보</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">이마트 EZ1 다운사이징 및 U2L/EOS</td>
-                                    <td class="text-center">2023.08 ~ 2024.01 (약 6개월) </td>
-                                    <td class="text-center">프로젝트관리 및 배치프로그램 이관</td>
-                                    <td class="text-center">이마트</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">이마트에브리데이 U2L 및 EOS</td>
-                                    <td class="text-center">2023.03 ~ 2024.07 (약 5개월)</td>
-                                    <td class="text-center">프로젝트관리 및 배치프로그램 이관</td>
-                                    <td class="text-center">이마트에브리데이</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">현대엔지니어링 스마트 CCTV 영상 분석 시스템 개발</td>
-                                    <td class="text-center">2022.06 ~ 2022.11 (약 6개월)</td>
-                                    <td class="text-center">프로젝트관리 및 실시간 영상분석 서비스 개발</td>
-                                    <td class="text-center">현대엔지니어링</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">신세계 TV쇼핑 시스템 고도화</td>
-                                    <td class="text-center">2021.10 ~ 2022.05 (약 8개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">신세계라이브쇼핑</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">현대엔지니어링 자산통합숙소관리시스템(AMS) 구축</td>
-                                    <td class="text-center">2020.09 ~ 2021.04 (약 8개월)</td>
-                                    <td class="text-center">프로젝트관리 , 기획 , REST API 개발</td>
-                                    <td class="text-center">현대엔지니어링</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">코스콤 비상장 주식 마켓 플랫폼 개발</td>
-                                    <td class="text-center">2019.06 ~ 2020.01 (약 8개월)</td>
-                                    <td class="text-center">프로젝트관리(PMO)</td>
-                                    <td class="text-center">코스콤</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">대림 스마트홈 서비스 플랫폼 구축</td>
-                                    <td class="text-center">2018.11 ~ 2019.04 (약 6개월)</td>
-                                    <td class="text-center">프로젝트 관리 및 서비스 개발</td>
-                                    <td class="text-center">대림</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">SKT TBIZPOINT SWING 연동시스템 개발</td>
-                                    <td class="text-center">2016.10 ~ 2017.04 (약 6개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">SK텔레콤</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">미래에셋증권 트레이딩 시스템 개발</td>
-                                    <td class="text-center">2015.12 ~ 2016.05 (약 6개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">미래에셋증권</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">SKT TBIZPOINT 웹사이트 고도화 개발</td>
-                                    <td class="text-center">2015.05 ~ 2015.09 (약 5개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">SK텔레콤</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">펀드슈퍼마켓 플랫폼 고도화 사업</td>
-                                    <td class="text-center">2014.09 ~ 2015.04 (약 8개월)</td>
-                                    <td class="text-center">프로젝트 개발 관리(개발PL)</td>
-                                    <td class="text-center">펀드슈퍼마켓</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">워커힐호텔 웹접근성 개선 사업</td>
-                                    <td class="text-center">2013.10 ~ 2013.12 (약 3개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">SK네트웍스</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">KISA 정보보호기술 온라인학습장 시스템 고도화</td>
-                                    <td class="text-center">2013.10 ~ 2013.12 (약 3개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">한국인터넷진흥원</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">서울여자간호대학교 홈페이지 리뉴얼 및 웹접근성 개선</td>
-                                    <td class="text-center">2013.07 ~ 2013.12 (약 6개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">서울여자간호대학교</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">우리투자증권 프라임브로커리지 시스템 구축</td>
-                                    <td class="text-center">2012.10 ~ 2013.03 (약 6개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">우리투자증권</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">하나대투증권 펀드하나 모바일 사이트 구축</td>
-                                    <td class="text-center">2011.11 ~ 2012.02 (약 4개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">하나대투증권</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">LIG투자증권 웹사이트 및 트레이딩시스템 구축</td>
-                                    <td class="text-center">2010.08 ~ 2011.02 (약 7개월)</td>
-                                    <td class="text-center">프로젝트관리</td>
-                                    <td class="text-center">LIG투자증권</td>
-                                </tr>
-                                <tr class="border-info fontsize12">
-                                    <td class="text-center">NH투자선물 FX마진 시스템 고도화</td>
-                                    <td class="text-center">2009.05 ~ 2010.01 (약 7개월)</td>
-                                    <td class="text-center">개발</td>
-                                    <td class="text-center">NH투자선물</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div-->
+    <div class="table-container">
+      <table class="rounded-table">
+        <thead>
+          <tr>
+            <th>프로젝트명</th>
+            <th>수행기간</th>
+            <th>주요역할</th>
+            <th>발주처</th>
+            <th>기술스택</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>모바일/웹/데스크톱 크로스플랫폼 금융차트 개발</td>
+                <td>2024.04 ~ 2024.08 (약 5개월) </td>
+                <td>프론트,백엔드 개발</td>
+                <td>서원정보</td>
+                <td>
+                    <img src="https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
+                    <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
+                    <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>이마트 EZ1 다운사이징 및 U2L/EOS</td>
+                <td>2023.08 ~ 2024.01 (약 6개월) </td>
+                <td>프로젝트관리 및 배치프로그램 이관</td>
+                <td>신세계아이앤씨       .rounded-table th {
+          background-color: #f8f9fa;
+          border-top: 1px solid #ddd;
+        }
+        
+        /* 나머지 스타일은 동일 */
+        .rounded-table td:first-child,
+        .rounded-table th:first-child {
+          border-left: 1px solid #ddd;
+        }
+        
+        .rounded-table tr:first-child th:first-child {
+          border-top-left-radius: 15px;
+        }
+        
+        .rounded-table tr:first-child th:last-child {
+          border-top-right-radius: 15px;
+        }
+        
+        .rounded-table tr:last-child td:first-child {
+          border-bottom-left-radius: 15px;
+        }
+        
+        .rounded-table tr:last-child td:last-child {
+          border-bottom-right-radius: 15px;
+        }
+    </style>
+<body>
+    <center>
+    <img src="ccc_page_2.png" width="1200"><br>
+    <div class="table-container">
+      <table class="rounded-table">
+        <thead>
+          <tr>
+            <th>프로젝트명</th>
+            <th>수행기간</th>
+            <th>주요역할</th>
+            <th>발주처</th>
+            <th>기술스택</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>모바일/웹/데스크톱 크로스플랫폼 금융차트 개발</td>
+                <td>2024.04 ~ 2024.08 (약 5개월) </td>
+                <td>프론트,백엔드 개발</td>
+                <td>(주)서원정보</td>
+                <td>
+                    <img src="https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
+                    <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
+                    <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>이마트 EZ1 다운사이징 및 U2L/EOS</td>
+                <td>2023.08 ~ 2024.01 (약 6개월) </td>
+                <td>프로젝트관리 및 배치프로그램 이관</td>
+                <td>(주)이마트</td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>이마트에브리데이 U2L 및 EOS</td>
+                <td>2023.03 ~ 2024.07 (약 5개월)</td>
+                <td>프로젝트관리 및 배치프로그램 이관</td>
+                <td>(주)이마트</td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>현대엔지니어링 스마트 CCTV 영상 분석 시스템 개발</td>
+                <td>2022.06 ~ 2022.11 (약 6개월)</td>
+                <td>실시간 영상분석 서비스 개발</td>
+                <td>현대엔지니어링(주)</td>
+                <td>
+                    <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+                    <img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
+                    <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>신세계 TV쇼핑 시스템 고도화</td>
+                <td>2021.10 ~ 2022.05 (약 8개월)</td>
+                <td>프로젝트관리</td>
+                <td>(주)신세계티비쇼핑</td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>현대엔지니어링 자산통합숙소관리시스템(AMS) 구축</td>
+                <td>2020.09 ~ 2021.04 (약 8개월)</td>
+                <td>프로젝트관리 , 기획 , REST API 개발</td>
+                <td>현대엔지니어링(주)</td>
+                <td>
+                    <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+                    <img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
+                </td>
+            </tr>
+            <tr>
+                <td>코스콤 비상장 주식 마켓 플랫폼 개발</td>
+                <td>2019.06 ~ 2020.01 (약 8개월)</td>
+                <td>프로젝트관리(PMO)</td>
+                <td>(주)코스콤</td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>대림 스마트홈 서비스 플랫폼 구축</td>
+                <td>2018.11 ~ 2019.04 (약 6개월)</td>
+                <td>프로젝트 관리 및 서비스 개발</td>
+                <td>(주)대림림</td>
+                <td>
+                    <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>SKT TBIZPOINT SWING 연동시스템 개발</td>
+                <td>2016.10 ~ 2017.04 (약 6개월)</td>
+                <td>프로젝트관리</td>
+                <td>SK텔레콤(주)</td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>미래에셋증권 트레이딩 시스템 개발</td>
+                <td>2015.12 ~ 2016.05 (약 6개월)</td>
+                <td>프로젝트관리</td>
+                <td><img src="img/miraeasset.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>SKT TBIZPOINT 웹사이트 고도화 개발</td>
+                <td>2015.05 ~ 2015.09 (약 5개월)</td>
+                <td>프로젝트관리</td>
+                <td><img src="img/skt2.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>펀드슈퍼마켓 플랫폼 고도화 사업</td>
+                <td>2014.09 ~ 2015.04 (약 8개월)</td>
+                <td>프로젝트 개발 관리(개발PL)</td>
+                <td><img src="img/fundsuper.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>워커힐호텔 웹접근성 개선 사업</td>
+                <td>2013.10 ~ 2013.12 (약 3개월)</td>
+                <td>프로젝트관리</td>
+                <td><img src="img/sknet.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>KISA 정보보호기술 온라인학습장 시스템 고도화</td>
+                <td>2013.10 ~ 2013.12 (약 3개월)</td>
+                <td>프로젝트관리</td>
+                <td><img src="img/kisa.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>서울여자간호대학교 홈페이지 리뉴얼 및 웹접근성 개선</td>
+                <td>2013.07 ~ 2013.12 (약 6개월)</td>
+                <td>프로젝트관리</td>
+                <td><img src="img/swcon.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>우리투자증권 프라임브로커리지 시스템 구축</td>
+                <td>2012.10 ~ 2013.03 (약 6개월)</td>
+                <td>프로젝트관리</td>
+                <td><img src="img/woori.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>하나대투증권 펀드하나 모바일 사이트 구축</td>
+                <td>2011.11 ~ 2012.02 (약 4개월)</td>
+                <td>프로젝트관리</td>
+                <td><img src="img/hana.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>LIG투자증권 웹사이트 및 트레이딩시스템 구축</td>
+                <td>2010.08 ~ 2011.02 (약 7개월)</td>
+                <td>프로젝트관리</td>
+                <td><img src="img/lig.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>NH투자선물 FX마진 시스템 고도화</td>
+                <td>2009.05 ~ 2010.01 (약 7개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>이트레이드증권 웹사이트 구축</td>
+                <td>2009.05 ~ 2009.10 (약 6개월)</td>
+                <td>프로젝트 관리</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>        
+            <tr>
+                <td>한화리조트 웹사이트 및 예약시스템 구축</td>
+                <td>2008.04 ~ 2008.12 (약 9개월)</td>
+                <td>프로젝트 관리</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>        
+            <tr>
+                <td>유진투자증권 HTS 가이드 사이트 개발</td>
+                <td>2006.10 ~ 2006.12 (약 3개월)</td>
+                <td>프로젝트 개발관리</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>        
+            <tr>
+                <td>한국경제TV WOWNET 웹사이트 구축</td>
+                <td>2006.03 ~ 2006.09 (약 7개월)</td>
+                <td>프로젝트 관리</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>        
+            <tr>
+                <td>AskMoney 공동 사업 구축</td>
+                <td>2005.10 ~ 2006.01 (약 4개월)</td>
+                <td>프로젝트 개발관리</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>        
+            <tr>
+                <td>전문인력관리시스템 구축</td>
+                <td>2005.11 ~ 2005.12 (약 2개월)</td>
+                <td>프로젝트 관리</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>        
+            <tr>
+                <td>에셋플러스 웹사이트 및 관리시스템 구축</td>
+                <td>2005.08 ~ 2005.11 (약 4개월)</td>
+                <td>프로젝트 관리</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>        
+            <tr>
+                <td>Moneta Chip 웹사이트 구축</td>
+                <td>2005.02 ~ 2005.05 (약 4개월)</td>
+                <td>프로젝트 개발관리(PL)</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>           
+            <tr>
+                <td>CRM 솔루션 개발</td>
+                <td>2004.07 ~ 2005.02 (약 8개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>항공권 예약시스템 구축</td>
+                <td>2003.10 ~ 2003.12 (약 3개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>
+            <tr>
+                <td>정도관리협회 LIS시스템 구축</td>
+                <td>2003.03 ~ 2003.04 (약 2개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>                     
+            <tr>
+                <td>모바일미팅솔루션 구축</td>
+                <td>2002.08 ~ 2003.04 (약 9개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>                     
+            <tr>
+                <td>Letsmusic 사이트 개발</td>
+                <td>2001.05~2001.07 (약 3개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>              
+            <tr>
+                <td>KT 화상회의 솔루션 개발</td>
+                <td>2001.06 ~ 2001.07 (약 2개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>              
+            <tr>
+                <td>KTF magicⓝ 모바일/웹사이트</td>
+                <td>2001.02 ~ 2001.05 (약 4개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>              
+            <tr>
+                <td>북한자료디지털화사업 구축</td>
+                <td>1999.08 ~ 2000.09 (약 2개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>              
+            <tr>
+                <td>한국관련 영문자료사이트 구축</td>
+                <td>1999.02 ~ 1999.04 (약 2개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>              
+            <tr>
+                <td>한국엔지니어링진흥협회 사이트 개발</td>
+                <td>1999.01 ~ 1999.02 (약 2개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>              
+            <tr>
+                <td>남북회담사료 디지털화 사업 구축</td>
+                <td>1998.12 ~ 1999.01 (약 2개월)</td>
+                <td>개발</td>
+                <td><img src="img/nh.png" height="40"></td>
+                <td>
+                    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                    <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+                    <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+                    <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                </td>
+            </tr>                                                                                                                                                                                     
+        </tbody>
+      </table>
+    </div>
     <img src="ccc_page_3.png" width="1200"><br>
     <img src="ccc_page_8.png" width="1200"><br>
     <img src="ccc_page_9.png" width="1200"><br>
